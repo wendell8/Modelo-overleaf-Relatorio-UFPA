@@ -1,0 +1,32 @@
+\section{Metodologia}
+A metodologia utilizada para atingir os objetivos propostos, inclui a realização de ensaios geofísicos para determinar a densidade do ambiente. Para isso, é utilizada a técnica de estimativa de densidade hiperbólica, amplamente utilizada para estimar a densidade de rochas e minerais em ambientes subsuperficiais.
+
+\subsection{Técnica utilizada para aplicação dos testes}
+Os testes são realizados alterando os parâmetros, no arquivo \textit{input}, de contraste de densidade e o fator que faz com que a densidade varie com a profundidade. O objetivo é identificar valores que resultem em anomalias gravimétricas semelhantes às causadas pela densidade hiperbólica, a fim de obter uma estimativa precisa da densidade de rochas e minerais, no espaço subsuperficial. Para realizar os testes, devem ser apresentados pelo menos dois testes diferentes, e as imagens obtidas durante esses testes serão utilizadas para subsidiar as análises, e interpretações dos resultados. As análises são baseadas em curvas ajustadas e distantes, representadas na Figura~\ref{Figura 1}a, que mostra as anomalias gravimétricas provocadas pela estrutura geológica do subsolo. 
+
+Foi utilizado, nos teste diversos valores, no arquivo de entrada. O arquivo de entrada, serve como subsidio para o programa \textit{sgravd} gerar uma matriz de números representando as variações de densidade para cada material em subsuperfície. Há a utilização de um algoritmo escrito em MatLab, sua função é de gerar as figuras, como por exemplo, a Figura~\ref{Figura 1}. Neste código foram feitas algumas pequenas alterações, os acentos, por exemplo, não foram bem recebidos pelo Octave, programa utilizado para rodar o código, portanto os mesmos foram retirados. Tabém foi alterado as legendas, neste caso sua posição ficou na parte inferior direita para não atrapalhara a visualização das linhas. Mediante a essas alterações, foi possível mostrar os resultados de forma sem os atrapalha-los nas imagens.
+
+\subsection{O cálculo do RMSE}
+De acordo com o material de estudo fornecido, o RMSE (Root Mean Square Error) é uma medida de avaliação utilizada para comparar a precisão de um modelo com os valores observados. Essa medida é calculada à partir da raiz quadrada da média dos erros ao quadrado entre os valores observados, e os valores previstos pelo modelo. Para calcular o RMSE, é necessário primeiro obter os valores observados e previstos pelo modelo. Em seguida, deve-se calcular o erro entre esses valores para cada observação. O erro é obtido pela diferença entre o valor observado e o valor previsto pelo modelo.
+
+
+Após obter os erros para cada observação, deve-se elevar esses erros ao quadrado e calcular a média desses valores. Em seguida, basta extrair a raiz quadrada desse valor para obter o RMSE. O RMSE é uma medida útil para avaliar a precisão de modelos em diversas áreas, como previsão de demanda, previsão do tempo, análise financeira, entre outras. Quanto menor for o valor do RMSE, maior será a precisão do modelo em relação aos dados observados. Portanto, esse cálculo envolve a comparação dos valores observados com os valores previstos pelo modelo e permite avaliar a precisão desse modelo em relação aos dados reais. Para tal feito, foi construído um código em Python e gerado uma lista de erros de acordo com seu respectivo teste. A Tabela 1 mostra a relação dos teste, do resultado do cálculo RMSE e suas respectivas imagens no decorrer do relatório.
+\vspace{2cm}
+   
+
+        \begin{table}[]
+            \centering
+            \begin{tabular}{|c|c|c|}
+            \hline
+            \multicolumn{1}{|l|}{\textbf{Teste}} & \multicolumn{1}{l|}{\textbf{Valor RMSE}} & \textbf{Figura} \\ \hline
+            \textbf{20}                          &  0.728                                    & \textbf{\ref{Figura 2}}      \\ \hline
+            \textbf{52}                          & 1.350                                   & \textbf{\ref{Figura 3}}      \\ \hline
+            \textbf{62}                          & 0.608                                     & \textbf{\ref{Figura 7}}      \\ \hline
+            \textbf{63}                          & 0.404                                     & \textbf{\ref{Figura 5}}      \\ \hline
+            \textbf{64}                          & 7.047                                     & \textbf{\ref{Figura 6}}      \\ \hline
+            \textbf{65}                          & 17.453                                     & \textbf{\ref{Figura 8}}      \\ \hline
+            \end{tabular}
+            \label{Tabela 1}
+            \caption{Tabela dos resultados do cálculo do RMSE}
+        \end{table}
+
